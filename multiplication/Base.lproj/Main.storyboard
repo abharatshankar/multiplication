@@ -40,6 +40,9 @@
                                 <state key="normal" title="Tables">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tablesAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ogJ-K2-dIZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpK-2K-ufh">
                                 <rect key="frame" x="49" y="333" width="213" height="55"/>
@@ -48,6 +51,9 @@
                                 <state key="normal" title="Practice">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="practiceAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E8q-11-plh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umg-a2-646">
                                 <rect key="frame" x="260" y="420" width="40" height="40"/>
@@ -72,13 +78,80 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="e9d-RN-qvg"/>
+                    <connections>
+                        <outlet property="transitionCurlDownLabel" destination="Cbo-JG-8QE" id="sKm-cE-YSf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="115"/>
+            <point key="canvasLocation" x="1132.5" y="115"/>
+        </scene>
+        <!--TablesVC-->
+        <scene sceneID="0tM-0M-ELR">
+            <objects>
+                <viewController storyboardIdentifier="tablesVC" id="KGx-TC-uBg" customClass="tablesVC" customModule="multiplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I8L-Xi-ZWW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzU-nT-iCw">
+                                <rect key="frame" x="144" y="45" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yzU-nT-iCw" secondAttribute="height" multiplier="1:1" id="2HI-Be-VjM"/>
+                                </constraints>
+                                <state key="normal" image="icon1.png"/>
+                                <connections>
+                                    <action selector="closeAction:" destination="KGx-TC-uBg" eventType="touchUpInside" id="a3c-El-Zgk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yzU-nT-iCw" firstAttribute="centerX" secondItem="I8L-Xi-ZWW" secondAttribute="centerX" id="YbR-TA-vua"/>
+                            <constraint firstItem="yzU-nT-iCw" firstAttribute="top" secondItem="Q0M-5N-hDB" secondAttribute="top" constant="25" id="xFS-6X-LsA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Q0M-5N-hDB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8c5-n8-2H0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794.375" y="111.25"/>
+        </scene>
+        <!--PracticeVC-->
+        <scene sceneID="8PP-na-Kr1">
+            <objects>
+                <viewController storyboardIdentifier="practiceVC" id="sUH-Nk-WA3" customClass="practiceVC" customModule="multiplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y7Z-Ar-GSC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sA2-kv-5rX">
+                                <rect key="frame" x="144" y="45" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sA2-kv-5rX" secondAttribute="height" multiplier="1:1" id="Sfu-ou-ymB"/>
+                                </constraints>
+                                <state key="normal" image="icon1.png"/>
+                                <connections>
+                                    <action selector="closeAction:" destination="sUH-Nk-WA3" eventType="touchUpInside" id="cGu-lt-1D6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sA2-kv-5rX" firstAttribute="top" secondItem="Dr2-8v-Pj9" secondAttribute="top" constant="25" id="G7R-J7-23I"/>
+                            <constraint firstItem="sA2-kv-5rX" firstAttribute="centerX" secondItem="y7Z-Ar-GSC" secondAttribute="centerX" id="f4h-9G-Ymk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dr2-8v-Pj9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L5g-M9-NDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2453" y="115"/>
         </scene>
     </scenes>
     <resources>
+        <image name="icon1.png" width="32" height="32"/>
         <image name="ribbon" width="820" height="314"/>
         <image name="share-icon-512" width="512" height="512"/>
         <image name="twoRibbons" width="820" height="597"/>
